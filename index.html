@@ -4,74 +4,123 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title></title>
+  <title>张天御｜CyberBeat</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      max-width: 900px;
+      margin: 0;
+      min-height: 100vh;
+      padding: 60px 20px;
+      background:
+        radial-gradient(circle at top right, #152d40, transparent 40%),
+        #0b1018;
+      color: #ffffff;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      line-height: 1.8;
+    }
+
+    main {
+      max-width: 960px;
       margin: 0 auto;
-      padding: 40px 20px;
-      background: #10141c;
+    }
+
+    .label {
+      margin-bottom: 8px;
+      color: #53cfff;
+      font-size: 15px;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      margin: 0 0 40px;
+      font-size: 46px;
+    }
+
+    h2 {
+      margin: 0;
       color: #ffffff;
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
+      font-size: 30px;
     }
 
-    h1, h2 {
-      color: #69b7ff;
+    .card {
+      margin-bottom: 28px;
+      padding: 30px;
+      background: rgba(25, 33, 45, 0.92);
+      border: 1px solid rgba(83, 207, 255, 0.25);
+      border-radius: 14px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
     }
 
-    .project {
-      margin: 30px 0;
-      padding: 24px;
-      background: #1b2230;
-      border-radius: 12px;
+    .description {
+      margin-top: 18px;
+      color: #d3d9e2;
+      font-size: 17px;
     }
 
-    .project img {
+    video {
+      display: block;
       width: 100%;
-      border-radius: 8px;
+      margin-top: 20px;
+      background: #000000;
+      border-radius: 10px;
     }
 
-    .button {
-      display: inline-block;
-      margin: 8px 8px 0 0;
-      padding: 10px 18px;
-      color: #ffffff;
-      background: #2878d0;
-      border-radius: 6px;
-      text-decoration: none;
+    @media (max-width: 600px) {
+      body {
+        padding: 30px 16px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+
+      .card {
+        padding: 22px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1></h1>
-    <p></p>
-    <p></p>
-  </header>
-
   <main>
-    <h2></h2>
+    <header>
+      <p class="label">PORTFOLIO</p>
+      <h1>张天御</h1>
+    </header>
 
-    <section class="project">
-      <img src="" alt="">
+    <section class="card">
+      <p class="label">作品</p>
+      <h2>CyberBeat</h2>
 
-      <h3></h3>
-      <p></p>
-      <p></p>
-      <p></p>
+      <p class="description">
+        毕业设计作品，打造赛博朋克题材第三人称 ARPG 游戏，
+        依托心率检测外设，搭建真实心率与游戏玩法联动的创新交互体系。
+      </p>
 
-      <a class="button" href=""></a>
-      <a class="button" href=""></a>
+      <p class="description">
+        运用 C# 开发外部 API 通信模块，完成心率设备接入，
+        对实时心率数据进行平滑过滤，划分 4 类心率区间，
+        并绑定游戏核心运行机制。
+      </p>
     </section>
 
-    <h2></h2>
-    <p></p>
+    <section class="card">
+      <p class="label">DEMO</p>
+      <h2>视频演示</h2>
 
-    <h2></h2>
-    <p></p>
+      <video controls playsinline preload="metadata">
+        <source src="videos/cyberbeat-demo.mp4" type="video/mp4">
+        当前浏览器不支持视频播放。
+      </video>
+    </section>
   </main>
 </body>
 </html>
